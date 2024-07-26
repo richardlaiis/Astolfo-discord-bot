@@ -12,7 +12,9 @@ bot = commands.Bot(command_prefix='.', intents = intents)
 
 @bot.event
 async def on_ready():
-    print('Bot is online.')
+    print(f'{bot.user} is online.')
+    slash = await bot.tree.sync()
+    print(f"{len(slash)} slash commands loaded.")
 
 @bot.command()
 async def load(ctx, extension):

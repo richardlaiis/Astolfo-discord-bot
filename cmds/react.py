@@ -13,6 +13,6 @@ class React(cogExtensions):
         random_pic = random.choice(info["IMG"])
         pic = discord.File(random_pic)
         await ctx.send(file = pic)
-
+        await ctx.send(ans)
 async def setup(bot):
     await bot.add_cog(React(bot))
